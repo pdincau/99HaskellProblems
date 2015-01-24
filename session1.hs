@@ -21,7 +21,7 @@ myButLast' (x:xs) = myButLast' xs
 --Problem 3: Find the K'th element of a list. The first element in the list is number 1.
 
 elementAt :: [a] -> Int -> a
-elementAt xs a = xs !! a-1
+elementAt xs a = xs !! (a-1)
 
 -- Problem 4: Find the number of elements of a list.
 
