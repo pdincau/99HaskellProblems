@@ -12,7 +12,7 @@ myLast' xs = head (reverse xs)
 -- We decided that calling myLast on empty list throws error
 
 myButLast :: [a] -> a
-myButLast  = myLast (init xs)
+myButLast xs = myLast (init xs)
 
 myButLast' :: [a] -> a
 myButLast' (x:y:[]) = x
