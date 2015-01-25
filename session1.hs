@@ -26,6 +26,6 @@ elementAt xs a = xs !! (a-1)
 -- Problem 4: Find the number of elements of a list.
 
 myLength :: [a] -> Int
-myLength xs = foldl (\acc _ -> acc + 1) 0 xs
+myLength = foldl (\acc _ -> acc + 1) 0
 
 myLength' xs = sum [ 1 | _ <- xs ]
