@@ -18,6 +18,11 @@ compress [] = []
 compress (x:xs) = x : (compress (dropWhile equal xs))
   where equal y = y == x
 
+-- or
+--
+-- compress (x:xs) = x : (compress $ dropWhile equal xs)
+--   where equal y = y == x
+
 -- 9 pack
 
-pack :: (Eq a) => [a] -> [[a]]
+-- pack :: (Eq a) => [a] -> [[a]]
