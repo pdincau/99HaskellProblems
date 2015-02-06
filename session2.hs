@@ -25,4 +25,7 @@ compress (x:xs) = x : (compress (dropWhile equal xs))
 
 -- 9 pack
 
--- pack :: (Eq a) => [a] -> [[a]]
+pack :: (Eq a) => [a] -> [[a]]
+pack [] = []
+pack xs@(x:_) = p : (pack rest)
+    where (p, rest) = span (== x) xs
