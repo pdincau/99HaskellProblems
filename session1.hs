@@ -2,7 +2,7 @@
 -- We decided that calling myLast on empty list throws error
 
 myLast :: [a] -> a
-myLast [a] = a
+myLast [x] = x
 myLast (x:xs) = myLast xs
 
 myLast' :: [a] -> a
