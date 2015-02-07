@@ -24,3 +24,6 @@ pack :: (Eq a) => [a] -> [[a]]
 pack [] = []
 pack xs@(x:_) = p : (pack rest)
     where (p, rest) = span (== x) xs
+
+pack' [] = []
+pack' xs@(x:_) = takeWhile (==x) xs : pack (dropWhile (==x) xs)
