@@ -6,7 +6,7 @@ myLast [a] = a
 myLast (x:xs) = myLast xs
 
 myLast' :: [a] -> a
-myLast' = head . reverse xs
+myLast' = head . reverse
 
 -- Problem 2: Find the last but one element of a list.
 -- We decided that calling myLast on empty list throws error
