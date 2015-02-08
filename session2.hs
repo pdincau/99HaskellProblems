@@ -15,8 +15,7 @@ isPalindrome xs = xs == reverse xs
 
 compress :: (Eq a) => [a] -> [a]
 compress [] = []
-compress (x:xs) = x : (compress (dropWhile equal xs))
-  where equal y = y == x
+compress (x:xs) = x : (compress $ dropWhile (== x) xs)
 
 -- 9 pack
 
